@@ -8,7 +8,7 @@ from datetime import datetime
 TOKEN = "token"
 
 bot = telebot.TeleBot(TOKEN)
-#||MAIN CONFIG||
+
 main = ["Ножиці папір✂️", "Однорукий бандит✋", "Кубік рубік🎲","💲Курс валют", "🌤️ Погода"]
 choice = ["Камінь", "Ножиці", "Папір"]
 page_2 = [""]
@@ -20,7 +20,7 @@ user_gifts = {}
 user_caculator = {}
 
 
-#plan trojanski kon
+
 @bot.message_handler(commands=['start'])
 def start_handler(message):
     try:
@@ -64,9 +64,9 @@ Premium: {premium_status}
 
 
     except AttributeError as a:
-        print("Что-то поламалосб")
+        print("Что-то поламалось")
 
-#Клавы с кнопками
+
 def get_keyboard():
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     keyboard.add("Ножиці папір✂️", "Однорукий бандит✋", "Кубік рубік🎲", "Вгадай число💌", "💲Курс валют",)
