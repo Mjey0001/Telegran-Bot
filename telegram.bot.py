@@ -5,7 +5,7 @@ import requests
 import json
 from datetime import datetime
 
-TOKEN = "8653301914:AAEYb2M4zMjEvYrTEGFGnhU4LXxoUhbWgBc"
+TOKEN = "token"
 
 bot = telebot.TeleBot(TOKEN)
 #||MAIN CONFIG||
@@ -253,7 +253,7 @@ def currency_menu(message):
 
 @bot.message_handler(func=lambda m: m.text ==  "USD 💵")
 def dolar(message):
-    url = ("https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5")
+    url = ("token")
     r = requests.get(url)
     data = r.json()
     for item in data:
@@ -265,7 +265,7 @@ def dolar(message):
 
 @bot.message_handler(func=lambda m: m.text and "EUR" in m.text)
 def eur(message):
-    url = "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5"
+    url = "token"
     r = requests.get(url)
     data = r.json()
 
@@ -277,7 +277,7 @@ def eur(message):
 
 @bot.message_handler(func=lambda m: m.text ==  "BTC ₿")
 def btc(message):
-    url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=uah"
+    url = "token"
     r = requests.get(url)
     data = r.json()
 
